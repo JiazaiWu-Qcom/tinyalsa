@@ -496,6 +496,8 @@ int play_sample(struct ctx *ctx)
 
     pcm_wait(ctx->pcm, -1);
 
+    pcm_drain(ctx->pcm);
+
     free(buffer);
     return 0;
 }
